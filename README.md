@@ -5,6 +5,12 @@ It handles Hotwire Turbo events to properly clean up the DOM from Alpine generat
 
 ## Install
 
+### From CDN
+
+```
+<script src="https://cdn.jsdelivr.net/npm/alpine-hotwire-turbo-adapter@0.1.0/dist/alpine-hotwire-turbo-adapter.min.js" defer></script> 
+```
+
 ### From NPM
  Install the package
 ```bash
