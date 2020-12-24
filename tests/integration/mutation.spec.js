@@ -1,7 +1,7 @@
 /* global describe, it, cy */
 
 describe('mutation observer', () => {
-  it('works correctly when used with turbolinks', () => {
+  it('works correctly when used with turbo', () => {
     cy.visit('/tests/res/mutation/index.html')
 
     // Add new Alpine component

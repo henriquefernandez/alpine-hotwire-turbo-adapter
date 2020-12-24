@@ -1,15 +1,16 @@
 {
-  "name": "alpine-turbolinks-adapter",
+  "name": "alpine-hotwire-turbo-adapter",
   "version": "0.3.0",
-  "description": "Bridge library to enable full support for Alpine components in pages using Turbolinks",
-  "main": "dist/alpine-turbolinks-adapter.js",
-  "module": "dist/alpine-turbolinks-adapter.esm.js",
+  "description": "Bridge library to enable full support for Alpine components in pages using hotwire turbo",
+  "main": "dist/alpine-hotwire-turbo-adapter.js",
+  "module": "dist/alpine-hotwire-turbo-adapter.esm.js",
   "directories": {
     "example": "examples"
   },
   "keywords": [
     "alpinejs",
-    "turbolinks"
+    "turbo",
+    "hotwire"
   ],
   "scripts": {
     "watch": "rollup -c -w",
@@ -21,7 +22,7 @@
     "posttest": "pkill -f http-server",
     "ci": "start-server-and-test 'http-server -c-1 --silent' 8080 'npx cypress run'"
   },
-  "author": "simo.todaro@gmail.com",
+  "author": "hrique.work@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.6",

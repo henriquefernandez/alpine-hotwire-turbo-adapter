@@ -79,20 +79,20 @@
 
         // Once Turbolinks finished is magic, we initialise Alpine on the new page
         // and resume the observer
-        document.addEventListener('turbolinks:load', function () {
+        document.addEventListener('turbo:load', function () {
           window.Alpine.discoverUninitializedComponents(function (el) {
             window.Alpine.initializeComponent(el);
           });
           requestAnimationFrame(function () {
             _this.setMutationObserverState(false);
           });
-        }); // Before swapping the body, clean up any element with x-turbolinks-cached
+        }); // Before swapping the body, clean up any element with x-turbo-cached
         // which do not have any Alpine properties.
-        // Note, at this point all html fragments marked as data-turbolinks-permanent
+        // Note, at this point all html fragments marked as data-turbo-permanent
         // are already copied over from the previous page so they retain their listener
         // and custom properties and we don't want to reset them.
 
-        document.addEventListener('turbolinks:before-render', function (event) {
+        document.addEventListener('turbo:before-render', function (event) {
           event.data.newBody.querySelectorAll('[data-alpine-generated-me],[x-cloak]').forEach(function (el) {
             if (el.hasAttribute('x-cloak')) {
               // When we get a new document body tag any cloaked elements so we can cloak
@@ -108,16 +108,16 @@
               }
             }
           });
-        }); // Pause the the mutation observer to avoid data races, it will be resumed by the turbolinks:load event.
+        }); // Pause the the mutation observer to avoid data races, it will be resumed by the turbo:load event.
         // We mark as `data-alpine-generated-m` all elements that are crated by an Alpine templating directives.
-        // The reason is that turbolinks caches pages using cloneNode which removes listeners and custom properties
+        // The reason is that turbo caches pages using cloneNode which removes listeners and custom properties
         // So we need to propagate this infomation using a HTML attribute. I know, not ideal but I could not think
         // of a better option.
         // Note, we can't remove any Alpine generated element as yet because if they live inside an element
-        // marked as data-turbolinks-permanent they need to be copied into the next page.
+        // marked as data-turbo-permanent they need to be copied into the next page.
         // The coping process happens somewhere between before-cache and before-render.
 
-        document.addEventListener('turbolinks:before-cache', function () {
+        document.addEventListener('turbo:before-cache', function () {
           _this.setMutationObserverState(true);
 
           document.body.querySelectorAll('[x-for],[x-if],[data-alpine-was-cloaked]').forEach(function (el) {
@@ -151,7 +151,7 @@
   }();
 
   if (window.Alpine) {
-    console.error('Alpine-turbolinks-adapter must be included before AlpineJs');
+    console.error('Alpine hotwire turbo adapter must be included before AlpineJs');
   } // Polyfill for legacy browsers
 
 

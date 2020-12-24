@@ -4,50 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-## [v0.3.0] - 2020-09-27
-### Added
-- Added support for legacy browsers (e.g. IE11)
-
-## [v0.2.1] - 2020-09-07
-### Fixed
-- Fixed bug when using Livewire+Turbolink causing the mutation observer not to start in certain scenarios
-
-## [v0.2.0] - 2020-09-03
-### Added
-- Added support for x-cloak to avoid flickering when navigating to cached versions
-
+## [v0.1.0] - 2020-12-24
 ### Changed
-- Update CDN link to use npm
-- *BC*: Order of import is now relevant. Script should go before Alpine Js.
-
-## [v0.1.4] - 2020-08-29
-### Fixed
-- (Internal) Previous version was wrong on npm
-
-## [v0.1.3] - 2020-08-29
-### Fixed
-- Mutation observer didn't restart correctly after the turbolinks:load event, causing issues with Livewire for some use cases
-
-## [v0.1.2] - 2020-08-15
-### Fixed
-- When using x-for and navigating back to the page using the browser history, all sibling elements (same parent) after a template tag were erroneously removed.
-
-## [v0.1.1] - 2020-08-15
+- Rename "turbolinks" to "turbo"
 ### Added
-- Documentation for Npm
+- Forked from https://github.com/SimoTod/alpine-turbolinks-adapter
 
-## [v0.1.0] - 2020-06-23
-### Added
-- Initial Release
+[v0.1.0]: https://github.com/henriquefernandez/alpine-hotwire-turbo-adapter/releases/tag/v0.1.0
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...HEAD
-[v0.3.0]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.2.1...v0.3.0
-[v0.2.1]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.2.0...v0.2.1
-[v0.2.0]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.1.4...v0.2.0
-[v0.1.4]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.1.3...v0.1.4
-[v0.1.3]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.1.2...v0.1.3
-[v0.1.2]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.1.1...v0.1.2
-[v0.1.1]: https://github.com/SimoTod/alpine-turbolinks-adapter/compare/v0.1.0...v0.1.1
-[v0.1.0]: https://github.com/SimoTod/alpine-turbolinks-adapter/releases/tag/v0.1.0

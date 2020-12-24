@@ -7,7 +7,7 @@ export default {
   output: [
     {
       name: 'Alpine',
-      file: 'dist/alpine-turbolinks-adapter.js',
+      file: 'dist/alpine-hotwire-turbo-adapter.js',
       format: 'umd'
     }
   ],
